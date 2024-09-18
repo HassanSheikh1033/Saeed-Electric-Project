@@ -1,0 +1,211 @@
+.adminMenu {
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  transition: all 300ms ease-out;
+}
+
+.menuActive {
+  left: 0;
+}
+
+.menuInactive {
+  left: -400px;
+}
+
+.control {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  color: inherit;
+  background: #181919;
+  border: 0;
+  border-radius: 6px;
+  margin: 8px 0;
+  font-family: inherit;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+input.control::placeholder {
+  color: #9f9d9e;
+}
+
+.strength {
+  text-align: left;
+  height: 30px;
+  text-transform: capitalize;
+  color: #868b94;
+}
+
+.bg-lighter {
+  background: #f0f0f0;
+}
+
+
+.bg-primary {
+  background: #5a3ee9;
+}
+
+.custom-shadow {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flex-basis1 {
+  flex-basis: 75%;
+}
+
+.flex-basis2 {
+  flex-basis: 25%;
+}
+
+
+/* Grid Table style========================= */
+.table-grid {
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+/* Invoice Grid System============================== */
+
+.invoice-grid {
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr 1.2fr 1.5fr 1fr 1fr;
+}
+
+.invoice-data-grid {
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+}
+
+
+/* Printing Invoice Style======================= */
+
+/* styles.css */
+.invoice-container {
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.invoice-header,
+.invoice-footer {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.invoice-header h1 {
+  margin-bottom: 10px;
+}
+
+.invoice-header p,
+.invoice-footer p {
+  margin: 5px 0;
+}
+
+.invoice-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.invoice-body th,
+.invoice-body td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.invoice-body th {
+  background-color: #f2f2f2;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .invoice-container,
+  .invoice-container * {
+    visibility: visible;
+  }
+
+  .invoice-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+
+.test {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+
+
+/* Add Invoice Grid */
+.add-invoice-grid {
+  grid-template-columns: 1.5fr 2.5fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+/* Loader================= */
+.loader {
+  color: #0080ff;
+  font-size: 45px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  transform: translateZ(0);
+  animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@keyframes mltShdSpin {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em,
+    0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+    0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 
+    0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+    0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, 
+    -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+    -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+     -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+     -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+     -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+     -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+    0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
+@keyframes round {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+ 

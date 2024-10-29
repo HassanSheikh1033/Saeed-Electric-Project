@@ -30,7 +30,7 @@ const InvoiceGrid = () => {
       const end = new Date().toISOString().split("T")[0]
 
       try {
-        const response = await fetch('http://localhost:4000/api/receipt/getreceiptdate/getall', {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/getreceiptdate/getall`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

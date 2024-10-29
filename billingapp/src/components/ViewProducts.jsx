@@ -22,7 +22,7 @@ export default function ViewProducts() {
     // Delete Single Products ==========================================
     const handleDelete = async (productId) => {
         try {
-            const response = await fetch(`http://localhost:4000/api/products/delete/${productId}`, {
+            const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/products/delete/${productId}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
@@ -45,7 +45,7 @@ export default function ViewProducts() {
         setSelectedProductId(productId);
         console.log(productId);
         setIsEditing(true);
-        const response = await fetch(`http://localhost:4000/api/products/${productId}`);
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/products/${productId}`);
         if (response.ok) {
             const product = await response.json();
             setFormData({
@@ -70,7 +70,7 @@ export default function ViewProducts() {
 
         try {
             // setLoading(true);
-            const response = await fetch(`http://localhost:4000/api/products/update/${selectedProductId}`, {
+            const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/products/update/${selectedProductId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

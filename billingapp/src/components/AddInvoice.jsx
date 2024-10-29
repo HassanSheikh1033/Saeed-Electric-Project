@@ -33,7 +33,7 @@ export default function AddInvoice() {
 
             // setLoading(true)
 
-            const response = await fetch('http://localhost:4000/api/receipt/single/latest')
+            const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/single/latest`)
 
             const json = await response.json()
 
@@ -57,7 +57,7 @@ export default function AddInvoice() {
 
         e.preventDefault()
 
-        const response = await fetch(`http://localhost:4000/api/receipt/addproduct/${invoice._id}`, {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/addproduct/${invoice._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ export default function AddInvoice() {
     const createNewInvoice = async (e) => {
         e.preventDefault()
 
-        const response = await fetch('http://localhost:4000/api/receipt/create', {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/create`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -133,7 +133,7 @@ export default function AddInvoice() {
 
     //Delete product from invoice ===========================================
     const handleDelete = async (productId) => {
-        const response = await fetch(`http://localhost:4000/api/receipt/removeproduct/${invoice._id}/${productId}`, {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/removeproduct/${invoice._id}/${productId}`, {
             method: 'DELETE',
         });
 
@@ -170,7 +170,7 @@ export default function AddInvoice() {
         e.preventDefault()
 
 
-        const response = await fetch(`http://localhost:4000/api/receipt/adddiscount/${invoice._id}`, {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/adddiscount/${invoice._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -192,7 +192,7 @@ export default function AddInvoice() {
     //Updating payment status=============================================
     const updatePaymentStatus = async () => {
 
-        const response = await fetch(`http://localhost:4000/api/receipt/updatepayment/${invoice._id}`, {
+        const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/receipt/updatepayment/${invoice._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

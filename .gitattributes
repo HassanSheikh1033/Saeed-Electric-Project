@@ -1,2 +1,37 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+billingapp/node_modules/
+server/node_modules/
+
+# Environment variables
+billingapp/.env
+billingapp/.env.local
+billingapp/.env.*.local
+server/.env
+server/.env.local
+server/.env.*.local
+
+# Build output
+billingapp/dist/
+server/dist/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

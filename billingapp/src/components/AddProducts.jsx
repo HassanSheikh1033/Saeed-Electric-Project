@@ -34,7 +34,7 @@ export default function AddProducts() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch('http://localhost:4000/api/products/create', {
+    const response = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/products/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ const DateFilterForm = () => {
         e.preventDefault();
 
         // Construct the URL with query parameters
-        const url = `mongodb://localhost:27017/api/receipt/getreceiptdate/getall?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
+        const url = `mongodb+srv://Hassan:Hassan@cluster0.fdsjd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/api/receipt/getreceiptdate/getall?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}`;
 
         try {
             const response = await fetch(url, {
